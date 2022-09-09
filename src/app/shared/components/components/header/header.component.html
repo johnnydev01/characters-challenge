@@ -2,7 +2,12 @@
   <mat-toolbar color="primary">
     <mat-toolbar-row class="border-bottom">
       <div class="toolbar-container-upper">
-        <span class="username d-md-flex">Johnny</span>
+        <a  routerLink="/sign-in" class="username d-md-flex" *ngIf="!auth.isLoggedIn">
+          Sing in
+        </a>
+        <span class="username d-md-flex" *ngIf="auth.isLoggedIn">
+          {{(auth.userData.displayName) ? auth.userData.displayName : 'User'}}
+        </span>
         <button mat-icon-button (click)="snav.toggle()" class="menu-icon-container d-sm-none">
           <i class="menu-icon"></i>
         </button>
@@ -21,7 +26,7 @@
         </div>
       </div>
     </mat-toolbar-row>
-    <mat-toolbar-row class="h-40 pr d-md-flex d-none">
+    <mat-toolbar-row class="h-40 pr d-md-flex d-none" *ngIf="auth.isLoggedIn">
       <div class="d-none d-md-flex toolbar-container-lower">
         <ul class="desktop-nav-container">
           <li
@@ -34,6 +39,9 @@
             </a>
           </li>
         </ul>
+        <a class="logout" (click)="auth.SignOut()" *ngIf="auth.isLoggedIn">
+          Log out
+        </a>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
@@ -57,11 +65,16 @@
             <div class="menu-nav-title">Marvel Insider</div>
           </a>
           <a href="#" class="d-flex justify-content-between align-items-center">
-            <span class="menu-nav-user">Johnny</span>
-            <span class="arrow-right-container">
-              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="16" viewBox="0 0 11 16"><path fill="none" d="M-.851-3L9.232 8-2.75 21.071"></path></svg>
+            <a routerLink="/sign-in" (click)="snav.toggle()" class="menu-nav-user"*ngIf="!auth.isLoggedIn">
+              Sign in
+            </a>
+            <span class="menu-nav-user" *ngIf="auth.isLoggedIn">
+              {{(auth.userData.displayName) ? auth.userData.displayName : 'User'}}
             </span>
           </a>
+          <a class="menu-nav-user"  (click)="auth.SignOut(); snav.toggle()" *ngIf="auth.isLoggedIn">
+              Log out
+            </a>
         </div>
       </mat-nav-list>
     </mat-sidenav>

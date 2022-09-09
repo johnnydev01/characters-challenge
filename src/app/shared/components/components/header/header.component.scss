@@ -11,6 +11,23 @@
   width: 100%;
 }
 
+.logout {
+  text-decoration: none;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.align-right {
+  right: 65px;
+  position: absolute;
+}
+.link:hover {
+  color: #FFF;
+}
+
 .username {
   padding: 0 25px;
   text-transform: uppercase;
@@ -19,6 +36,8 @@
   font-size: 16px;
   border-left: 1px solid #393939;
   border-right: 1px solid #393939;
+  color: #FFF;
+  text-decoration: none;
 }
 
 .logo-link {
@@ -183,6 +202,8 @@
   height: 40px;
   max-width: 1200px;
   display: none;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
   margin: auto;
   width: 100%;

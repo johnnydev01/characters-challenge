@@ -1,12 +1,14 @@
 import { Injectable, NgZone } from '@angular/core';
-import { User } from '../services/user';
-import * as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
+
+import * as auth from 'firebase/auth';
 import {
   AngularFirestore,
   AngularFirestoreDocument,
 } from '@angular/fire/compat/firestore';
-import { Router } from '@angular/router';
+
+import { User } from '../models/user';
 @Injectable({
   providedIn: 'root',
 })
@@ -39,7 +41,7 @@ export class AuthService {
         this.SetUserData(result.user);
         this.afAuth.authState.subscribe((user) => {
           if (user) {
-            this.router.navigate(['dashboard']);
+            this.router.navigate(['characters']);
           }
         });
       })
@@ -88,7 +90,7 @@ export class AuthService {
   // Sign in with Google
   GoogleAuth() {
     return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['characters']);
     });
   }
   // Auth logic to run auth providers
@@ -96,7 +98,7 @@ export class AuthService {
     return this.afAuth
       .signInWithPopup(provider)
       .then((result) => {
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['characters']);
         this.SetUserData(result.user);
       })
       .catch((error) => {

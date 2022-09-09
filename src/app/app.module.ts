@@ -16,6 +16,7 @@ import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { AuthService } from "./shared/services/auth.service";
+import { CharactersComponent } from './pages/characters/characters.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AuthService } from "./shared/services/auth.service";
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
+    CharactersComponent,
   ],
   imports: [
     BrowserModule,

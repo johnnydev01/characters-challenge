@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CharactersComponent } from './pages/characters/characters.component';
 
 
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
@@ -13,6 +14,8 @@ const routes: Routes = [
   { path: 'register-user', component: SignUpComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
+  { path: 'characters', component: CharactersComponent },
+
 ];
 
 @NgModule({

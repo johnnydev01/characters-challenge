@@ -281,13 +281,7 @@ input:-moz-placeholder {
   cursor: pointer;
 }
 
-.sidebar .nav-link.active,
-.sidebar a:hover,
-a:not([href]):not([tabindex]):focus,
-a:not([href]):not([tabindex]):hover {
-  color: #e91e63;
-  background: #efefef;
-}
+
 
 /* * Content */
 [role="main"] {
