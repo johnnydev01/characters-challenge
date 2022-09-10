@@ -2,7 +2,7 @@
   <mat-toolbar color="primary">
     <mat-toolbar-row class="border-bottom">
       <div class="toolbar-container-upper">
-        <a  class="username d-md-flex" *ngIf="!auth.isLoggedIn">
+        <a  routerLink="/sign-in" class="username d-md-flex" *ngIf="!auth.isLoggedIn">
           Sing in
         </a>
         <span class="username d-md-flex" *ngIf="auth.isLoggedIn">
