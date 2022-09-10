@@ -25,7 +25,7 @@
           type="button"
           class="btn btnPrimary"
           value="Sign Up"
-          (click)="authService.SignUp(userEmail.value, userPwd.value)"
+          (click)="authService.signUp(userEmail.value, userPwd.value)"
         />
       </div>
       <div class="formGroup">
@@ -36,7 +36,7 @@
         <button
           type="button"
           class="btn googleBtn"
-          (click)="authService.GoogleAuth()"
+          (click)="authService.googleAuth()"
         >
           <i class="fab fa-google-plus-g"></i>
           Continue with Google
@@ -44,10 +44,10 @@
       </div>
     </div>
     <div class="redirectToLogin">
-      <span
-        >Already have an account?
-        <span class="redirect" routerLink="/sign-in">Log In</span></span
-      >
+      <span>
+        Already have an account?
+        <span class="redirect" routerLink="/sign-in">Log In</span>
+      </span>
     </div>
   </div>
 </div>

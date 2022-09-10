@@ -75,7 +75,6 @@ h3 {
 
 .authBlock {
   margin: 0 auto;
-  margin-top: 20px;
   max-width: 400px;
   background: white;
   padding: 30px 40px 10px;
@@ -653,5 +652,12 @@ body .table thead th {
 
   .px-logo {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .authBlock {
+    margin-top: 40px;
+
   }
 }

@@ -8,6 +8,8 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './shared/components/components/components.module';
@@ -17,6 +19,8 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { AuthService } from "./shared/services/auth.service";
 import { CharactersComponent } from './pages/characters/characters.component';
+import { RouterModule } from '@angular/router';
+import { VerifyEmailComponent } from './pages/verify-email/verify-email.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,7 @@ import { CharactersComponent } from './pages/characters/characters.component';
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
+    VerifyEmailComponent,
     CharactersComponent,
   ],
   imports: [
@@ -36,6 +41,8 @@ import { CharactersComponent } from './pages/characters/characters.component';
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    MatSnackBarModule
+
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
