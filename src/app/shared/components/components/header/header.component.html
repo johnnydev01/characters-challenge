@@ -6,7 +6,7 @@
           Sing in
         </a>
         <span class="username d-md-flex" *ngIf="auth.isLoggedIn">
-          {{(auth.userData.displayName) ? auth.userData.displayName : 'User'}}
+          {{(auth.userData?.displayName) ? auth.userData?.displayName : 'User'}}
         </span>
         <button mat-icon-button (click)="snav.toggle()" class="menu-icon-container d-sm-none">
           <i class="menu-icon"></i>
@@ -69,7 +69,7 @@
               Sign in
             </a>
             <span class="menu-nav-user" *ngIf="auth.isLoggedIn">
-              {{(auth.userData.displayName) ? auth.userData.displayName : 'User'}}
+              {{(auth.userData?.displayName) ? auth.userData?.displayName : 'User'}}
             </span>
           </div>
           <a class="menu-nav-user"  (click)="auth.signOut(); snav.toggle()" *ngIf="auth.isLoggedIn">

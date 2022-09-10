@@ -1,0 +1,30 @@
+<div *ngIf="(character$ | async) as character">
+  <figure class="figure-container">
+    <img src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="" class="character-image img-fluid">
+    <figcaption class="character-name">{{character.name}}</figcaption>
+  </figure>
+
+  <section>
+    <div class="grid-container mt-30">
+      <div class="JCMultiRow">
+        <div class="row-item comic-item" *ngFor="let comic of comics$ | async">
+          <div class="row-item-image">
+            <a href="" class="row-item-image-url">
+              <img class="img-fluid" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}">
+            </a>
+          </div>
+          <div class="row-item-text">
+            <h5>
+              <a class="meta-title" style="color: #000;" href="#">
+                {{comic.title}}
+              </a>
+            </h5>
+            <p class="meta-creators">
+              <a href="//www.marvel.com/comics/creators/14041/gene_yang" style="color: #000;">{{comic.creators.items[0]?.name}}</a>
+            </p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

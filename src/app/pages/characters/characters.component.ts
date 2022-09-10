@@ -26,6 +26,7 @@ export class CharactersComponent implements OnInit {
   constructor(private charactersService: CharactersService) { }
 
   ngOnInit(): void {
+
   }
 
 }

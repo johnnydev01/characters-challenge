@@ -12,10 +12,11 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 import { CharactersComponent } from './characters.component';
 import { CharactersService } from './characters.service';
+import { CharacterDetailsComponent } from './components/character-details/character-details.component';
 
 
 @NgModule({
-  declarations: [CharactersComponent],
+  declarations: [CharactersComponent, CharacterDetailsComponent],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -29,6 +30,10 @@ import { CharactersService } from './characters.service';
       {
         path: '',
         component: CharactersComponent
+      },
+      {
+        path: ':id',
+        component: CharacterDetailsComponent
       }
     ])
   ],
