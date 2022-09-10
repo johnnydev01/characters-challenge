@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'register-user', component: SignUpComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
-  { path: 'characters', component: CharactersComponent, canActivate: [AuthGuard]  },
+  { path: 'characters', loadChildren: () => import('./pages/characters/characters.module').then(m=> m.CharactersModule), canActivate: [AuthGuard]  },
 
 ];
 
