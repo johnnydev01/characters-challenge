@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { CharacterDetailsComponent } from './character-details.component';
 
-fdescribe(CharacterDetailsComponent.name, () => {
+describe(CharacterDetailsComponent.name, () => {
   let component: CharacterDetailsComponent;
   let fixture: ComponentFixture<CharacterDetailsComponent>;
 
