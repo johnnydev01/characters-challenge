@@ -1,14 +1,20 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
 
 import { CharacterDetailsComponent } from './character-details.component';
 
-describe('CharacterDetailsComponent', () => {
+fdescribe(CharacterDetailsComponent.name, () => {
   let component: CharacterDetailsComponent;
   let fixture: ComponentFixture<CharacterDetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CharacterDetailsComponent ]
+      declarations: [ CharacterDetailsComponent ],
+      imports: [
+        HttpClientTestingModule,
+        RouterModule.forRoot([]),
+      ]
     })
     .compileComponents();
   });
