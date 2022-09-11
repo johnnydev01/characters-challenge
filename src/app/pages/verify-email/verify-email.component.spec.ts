@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 import { environment } from 'src/environments/environment';
 import { VerifyEmailComponent } from './verify-email.component';
 
-fdescribe(VerifyEmailComponent.name, () => {
+describe(VerifyEmailComponent.name, () => {
   let component: VerifyEmailComponent;
   let fixture: ComponentFixture<VerifyEmailComponent>;
 
